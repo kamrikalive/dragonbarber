@@ -38,6 +38,7 @@ body {
   position: relative;
   min-height: 100vh;
   display: flex;
+  flex-direction: column; /* Важно: выстраиваем элементы в колонку */
   align-items: center;
   justify-content: center;
   background-image: url('https://storage.yandexcloud.net/relaxdev/dragonbarber/Gemini_Generated_Image_7zoven7zoven7zov.png');
@@ -57,12 +58,21 @@ body {
   z-index: 1;
 }
 
+/* Стили для логотипа */
+.hero-logo {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 1rem;
+  /* Легкая анимация появления (опционально) */
+  animation: fadeIn 1.5s ease-out; 
+}
+
 .hero-content {
   position: relative;
   z-index: 2;
   text-align: center;
   color: var(--text-light);
-  padding: 40px 20px;
+  padding: 20px 20px 40px; /* Немного уменьшил верхний отступ */
 }
 
 .hero-title {
@@ -71,6 +81,7 @@ body {
   margin-bottom: 1rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   letter-spacing: 2px;
+  line-height: 1.1;
 }
 
 .hero-subtitle {
@@ -233,6 +244,12 @@ body {
   color: var(--text-light);
   padding: 2rem 20px;
   text-align: center;
+}
+
+/* Анимация */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @media (max-width: 768px) {

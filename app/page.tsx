@@ -37,6 +37,14 @@ export default function Home() {
   return (
     <main>
       <section className="hero">
+        <div className="hero-logo">
+          <Image
+            src="/logo.png"
+            width={150}
+            height={150}
+            alt="Black Dragon Barbershop Logo"
+          />
+        </div>
         <div className="hero-content">
           <h1 className="hero-title">BLACK DRAGON</h1>
           <p className="hero-subtitle">Барбершоп в Одинцово</p>
@@ -48,19 +56,19 @@ export default function Home() {
           <h2 className="section-title">Контакты</h2>
           <div className="contacts-grid">
             <div className="contact-card">
-              <div className="contact-icon">���</div>
+              <div className="contact-icon">📍</div>
               <h3 className="contact-title">Адрес</h3>
               <p className="contact-info">ул. Чистяковой, 84<br />Одинцово</p>
             </div>
             <div className="contact-card">
-              <div className="contact-icon">���</div>
+              <div className="contact-icon">📞</div>
               <h3 className="contact-title">Телефон</h3>
               <p className="contact-info">
                 <a href="tel:+79804091478" className="contact-link">+7 (980) 409-14-78</a>
               </p>
             </div>
             <div className="contact-card">
-              <div className="contact-icon">���</div>
+              <div className="contact-icon">🕒</div>
               <h3 className="contact-title">Время работы</h3>
               <p className="contact-info">Открыто до 20:00</p>
             </div>
