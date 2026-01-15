@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Black Dragon Barber - Барбершоп в Одинцово',
@@ -30,7 +31,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru">
-      <body>{children}</body>
+      <body>
+        {children}
+        <footer style={{ textAlign: 'center', padding: '20px', marginTop: '20px' }}>
+          <Link href="/privacy">Политика конфиденциальности</Link>
+        </footer>
+      </body>
     </html>
   )
 }

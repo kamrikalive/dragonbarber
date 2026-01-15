@@ -36,46 +36,27 @@ const pricingData = {
 export default function Home() {
   return (
     <main>
+      {/* Hero Section */}
       <section className="hero">
         <div className="hero-logo">
           <Image
-            src="/logo.png"
-            width={150}
-            height={150}
+            src="/favicon.svg"
+            width={180}
+            height={180}
             alt="Black Dragon Barbershop Logo"
+            priority
           />
         </div>
         <div className="hero-content">
           <h1 className="hero-title">BLACK DRAGON</h1>
           <p className="hero-subtitle">Барбершоп в Одинцово</p>
-        </div>
-      </section>
-
-      <section className="section contacts-section">
-        <div className="container">
-          <h2 className="section-title">Контакты</h2>
-          <div className="contacts-grid">
-            <div className="contact-card">
-              <div className="contact-icon">📍</div>
-              <h3 className="contact-title">Адрес</h3>
-              <p className="contact-info">ул. Чистяковой, 84<br />Одинцово</p>
-            </div>
-            <div className="contact-card">
-              <div className="contact-icon">📞</div>
-              <h3 className="contact-title">Телефон</h3>
-              <p className="contact-info">
-                <a href="tel:+79804091478" className="contact-link">+7 (980) 409-14-78</a>
-              </p>
-            </div>
-            <div className="contact-card">
-              <div className="contact-icon">🕒</div>
-              <h3 className="contact-title">Время работы</h3>
-              <p className="contact-info">Открыто до 20:00</p>
-            </div>
+          <div className="cta-buttons">
+            <a href="https://n1939386.yclients.com/company/1708875/personal/menu?o=" className="cta-button">Записаться онлайн</a>
           </div>
         </div>
       </section>
 
+      {/* Price Section */}
       <section className="section price-section">
         <div className="container">
           <h2 className="section-title">Прайс-лист</h2>
@@ -100,6 +81,62 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Contacts Section */}
+      {/* Contacts Section */}
+      <section className="section contacts-section" id="contacts">
+        <div className="container">
+          <h2 className="section-title">Контакты</h2>
+          
+          <div className="contacts-wrapper">
+            {/* Карточки контактов */}
+            <div className="contacts-grid">
+              <div className="contact-card">
+                <div className="contact-icon">📍</div>
+                <h3 className="contact-title">Адрес</h3>
+                <p className="contact-info">ул. Чистяковой, 84<br />Одинцово</p>
+              </div>
+              <div className="contact-card">
+                <div className="contact-icon">📞</div>
+                <h3 className="contact-title">Телефон</h3>
+                <p className="contact-info">
+                  <a href="tel:+79804091478" className="contact-link">+7 (980) 409-14-78</a>
+                </p>
+              </div>
+              <div className="contact-card">
+                <div className="contact-icon">🕒</div>
+                <h3 className="contact-title">Время работы</h3>
+                <p className="contact-info">Открыто до 20:00</p>
+              </div>
+            </div>
+
+            {/* Карта (Ваш виджет) */}
+            <div className="map-container">
+              <div style={{ position: 'relative', overflow: 'hidden' }}>
+                <a 
+                  href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps" 
+                  style={{ color: '#eee', fontSize: '12px', position: 'absolute', top: '0px' }}
+                >
+                  Москва
+                </a>
+                <a 
+                  href="https://yandex.ru/maps/213/moscow/?ll=37.326563%2C55.705960&mode=routes&rtext=55.704384%2C37.326980~55.707371%2C37.323608&rtt=auto&ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D102399607919&utm_medium=mapframe&utm_source=maps&z=16.77" 
+                  style={{ color: '#eee', fontSize: '12px', position: 'absolute', top: '14px' }}
+                >
+                  Яндекс Карты
+                </a>
+                <iframe 
+                  src="https://yandex.ru/map-widget/v1/?ll=37.326563%2C55.705960&mode=routes&rtext=55.704384%2C37.326980~55.707371%2C37.323608&rtt=auto&ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D102399607919&z=16.77" 
+                  width="100%" 
+                  height="400" 
+                  frameBorder="1" 
+                  allowFullScreen={true} 
+                  style={{ position: 'relative' }}
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <footer className="footer">
         <div className="container">
           <p>&copy; {new Date().getFullYear()} Black Dragon Barber. Все права защищены.</p>
