@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: 'Black Dragon Barber',
     images: [
       {
-        url: 'https://storage.yandexcloud.net/relaxdev/dragonbarber/Gemini_Generated_Image_7zoven7zoven7zov.png',
+        url: 'https://storage.yandexcloud.net/relaxdev/dragonbarber/rov.jpg',
         width: 1200,
         height: 630,
         alt: 'Black Dragon Barber',
