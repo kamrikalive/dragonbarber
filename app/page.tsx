@@ -49,7 +49,7 @@ export default function Home() {
         </div>
         <div className="hero-content">
           <h1 className="hero-title">BLACK DRAGON</h1>
-          <p className="hero-subtitle">Барбершоп в Одинцово</p>
+          <p className="hero-subtitle">Барбершоп в Трехгорке (Одинцово)</p>
           <div className="cta-buttons">
             <a href="https://n1939386.yclients.com/company/1708875/personal/menu?o=" className="cta-button">Записаться онлайн</a>
           </div>

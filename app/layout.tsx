@@ -3,7 +3,7 @@ import './globals.css'
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Black Dragon Barber - Барбершоп в Одинцово',
+  title: 'Black Dragon Barber - Барбершоп в Трехгорке',
   description: 'Мужская стрижка, моделирование бороды и другие услуги барбера в Одинцово. Ул. Чистяковой, 84.',
   // Добавляем настройки для превью (Open Graph)
   openGraph: {
