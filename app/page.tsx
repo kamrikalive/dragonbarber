@@ -105,7 +105,7 @@ export default function Home() {
               <div className="contact-card">
                 <div className="contact-icon">🕒</div>
                 <h3 className="contact-title">Время работы</h3>
-                <p className="contact-info">Открыто до 20:00</p>
+                <p className="contact-info">С 10:00 до 20:00</p>
               </div>
             </div>
 
@@ -137,11 +137,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <footer className="footer">
-        <div className="container">
-          <p>&copy; {new Date().getFullYear()} Black Dragon Barber. Все права защищены.</p>
-        </div>
-      </footer>
     </main>
   )
 }
