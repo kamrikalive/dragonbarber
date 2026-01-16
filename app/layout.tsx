@@ -5,7 +5,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Black Dragon Barber - Барбершоп в Трехгорке',
   description: 'Мужская стрижка, моделирование бороды и другие услуги барбера в Одинцово. Ул. Чистяковой, 84.',
-  metadataBase: new URL('https://bbat9dpke4itao82ona7.containers.yandexcloud.net/'),
+  metadataBase: new URL('https://dragonbarber.ru/'),
   icons: {
     icon: [
       { url: '/favicon.ico' },
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Black Dragon Barber - Барбершоп в Одинцово',
     description: 'Мужская стрижка и моделирование бороды. Записывайтесь!',
-    url: 'https://bbat9dpke4itao82ona7.containers.yandexcloud.net/',
+    url: 'https://dragonbarber.ru/',
     siteName: 'Black Dragon Barber',
     images: [
       {

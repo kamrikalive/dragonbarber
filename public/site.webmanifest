@@ -1,6 +1,6 @@
 {
   "name": "BlackDragon",
-  "short_name": "BlackDragon",
+  "short_name": "DragonBarber",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -15,7 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#d44240",
-  "background_color": "#bfbfbe",
+  "theme_color": "#010101",
+  "background_color": "#4a4b49",
   "display": "standalone"
 }
