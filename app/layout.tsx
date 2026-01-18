@@ -1,11 +1,20 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import './globals.css'
 import Link from 'next/link';
 
+export const viewport: Viewport = {
+  themeColor: '#1a1a1a',
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+}
+
 export const metadata: Metadata = {
-  title: 'Black Dragon Barber - Барбершоп в Трехгорке',
-  description: 'Мужская стрижка, моделирование бороды и другие услуги барбера в Одинцово. Ул. Чистяковой, 84.',
+  title: 'Black Dragon Barber | Мужские стрижки в Одинцово (Трехгорка)',
+  description: 'Барбершоп Black Dragon в Трехгорке. Профессиональные мужские стрижки, оформление бороды, бритье. Запись онлайн +7 (980) 409-14-78. Ул. Чистяковой, 84.',
+  keywords: ['барбершоп одинцово', 'мужская стрижка трехгорка', 'барбершоп black dragon', 'стрижка бороды одинцово', 'мужская парикмахерская чистяковой 84'],
   metadataBase: new URL('https://dragonbarber.ru/'),
+  manifest: '/site.webmanifest',
   icons: {
     icon: [
       { url: '/favicon.ico' },
@@ -16,7 +25,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Black Dragon Barber - Барбершоп в Одинцово',
-    description: 'Мужская стрижка и моделирование бороды. Записывайтесь!',
+    description: 'Стильные стрижки и оформление бороды. Ждем вас на ул. Чистяковой, 84.',
     url: 'https://dragonbarber.ru/',
     siteName: 'Black Dragon Barber',
     images: [
@@ -24,11 +33,15 @@ export const metadata: Metadata = {
         url: 'https://storage.yandexcloud.net/relaxdev/dragonbarber/rov.jpg',
         width: 1200,
         height: 630,
-        alt: 'Black Dragon Barber',
+        alt: 'Интерьер Black Dragon Barber',
       },
     ],
     locale: 'ru_RU',
     type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 }
 

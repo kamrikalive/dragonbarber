@@ -34,13 +34,52 @@ const pricingData = {
 }
 
 export default function Home() {
+  // Добавляем микроразметку для SEO
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    "name": "Black Dragon Barber",
+    "image": "https://storage.yandexcloud.net/relaxdev/dragonbarber/rov.jpg",
+    "telephone": "+79804091478",
+    "url": "https://dragonbarber.ru",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ул. Чистяковой, 84",
+      "addressLocality": "Одинцово",
+      "addressRegion": "Московская область",
+      "postalCode": "143005",
+      "addressCountry": "RU"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 55.707371,
+      "longitude": 37.323608
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+      ],
+      "opens": "10:00",
+      "closes": "20:00"
+    },
+    "priceRange": "500-1800 RUB"
+  }
+
   return (
     <main>
+      {/* ВАЖНО: Вот этот кусок выводит JSON-LD на страницу */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-logo">
+          {/* Проверьте, что хотите использовать именно favicon.svg, а не logo.png */}
           <Image
-            src="/favicon.svg"
+            src="/favicon.svg" 
             width={180}
             height={180}
             alt="Black Dragon Barbershop Logo"
@@ -82,7 +121,6 @@ export default function Home() {
       </section>
 
       {/* Contacts Section */}
-      {/* Contacts Section */}
       <section className="section contacts-section" id="contacts">
         <div className="container">
           <h2 className="section-title">Контакты</h2>
@@ -109,7 +147,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Карта (Ваш виджет) */}
+            {/* Карта */}
             <div className="map-container">
               <div style={{ position: 'relative', overflow: 'hidden' }}>
                 <a 
