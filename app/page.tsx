@@ -79,9 +79,9 @@ export default function Home() {
         <div className="hero-logo">
           {/* Проверьте, что хотите использовать именно favicon.svg, а не logo.png */}
           <Image
-            src="/favicon.svg" 
-            width={180}
-            height={180}
+            src="/lo.png" 
+            width={170}
+            height={170}
             alt="Black Dragon Barbershop Logo"
             priority
           />

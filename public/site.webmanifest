@@ -1,5 +1,5 @@
 {
-  "name": "BlackDragon",
+  "name": "DragonBarber",
   "short_name": "DragonBarber",
   "icons": [
     {
@@ -15,7 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#010101",
-  "background_color": "#4a4b49",
+  "theme_color": "#342827",
+  "background_color": "#342827",
   "display": "standalone"
 }

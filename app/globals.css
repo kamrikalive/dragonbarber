@@ -60,15 +60,48 @@ body {
   z-index: 1;
 }
 
+/* В app/globals.css */
+
 .hero-logo {
   position: relative;
   z-index: 2;
   margin-bottom: 1.5rem;
   animation: fadeIn 1s ease-out;
+  
+  /* Размеры круга (фиксированные, чтобы был ровный круг) */
+  width: 220px;
+  height: 220px;
+  
+  /* Форма и цвет */
   border-radius: 50%;
+  background-color: #fff; /* Белый фон для лого */
+  
+  /* Черный бордюр */
+  border: 6px solid #000; 
+  
+  /* Подсветка (свечение) */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4), /* Ближнее белое свечение */
+              0 0 40px rgba(212, 175, 55, 0.6);   /* Дальнее золотое свечение */
+              
+  /* Важно: Центрирование и обрезка */
   overflow: hidden;
-  transform: scale(1.3);
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-logo img {
+  /* Заполняем пространство */
+  width: 100%;
+  height: 100%;
+  
+  /* cover - заполняет весь круг (может чуть подрезать края)
+     contain - показывает лого целиком (могут быть белые полосы по бокам) 
+     Попробуйте cover, так как у нас теперь есть отступы за счет бордюра */
+  object-fit: cover; 
+  
+  /* Если нужно чуть поправить положение по вертикали */
+  object-position: center;
 }
 
 .hero-content {
@@ -290,10 +323,7 @@ body {
     font-size: 2.5rem;
   }
   
-  .hero-logo img {
-    width: 140px;
-    height: 140px;
-  }
+
 
   .section {
     padding: 40px 0;
