@@ -75,7 +75,21 @@ export default function Home() {
       />
 
       {/* Hero Section */}
+      {/* Hero Section */}
       <section className="hero">
+        {/* НОВОЕ: Фоновая картинка через Image */}
+        {/* Класс hero-bg-image скроет её на мобильных через CSS, чтобы вообще не грузить трафик */}
+        <div className="hero-bg-wrapper">
+             <Image
+              src="/rov.jpg" // Теперь берем из папки public
+              alt="Black Dragon Background"
+              fill
+              priority // Грузим сразу, это первый экран
+              style={{ objectFit: 'cover' }}
+              quality={85}
+            />
+        </div>
+
         <div className="hero-logo">
           <Image
             src="/lo.png" 
@@ -146,7 +160,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Карта */}
+            {/* Карта с ленивой загрузкой */}
             <div className="map-container">
               <div style={{ position: 'relative', overflow: 'hidden' }}>
                 <a 
@@ -161,10 +175,12 @@ export default function Home() {
                 >
                   Яндекс Карты
                 </a>
+                {/* НОВОЕ: loading="lazy" */}
                 <iframe 
                   src="https://yandex.ru/map-widget/v1/?ll=37.326563%2C55.705960&mode=routes&rtext=55.704384%2C37.326980~55.707371%2C37.323608&rtt=auto&ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D102399607919&z=16.77" 
                   width="100%" 
                   height="400" 
+                  loading="lazy" 
                   frameBorder="1" 
                   allowFullScreen={true} 
                   style={{ position: 'relative' }}

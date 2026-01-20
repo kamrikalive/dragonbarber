@@ -42,11 +42,33 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url('https://storage.yandexcloud.net/relaxdev/dragonbarber/rov.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  /* УБРАЛИ background-image отсюда */
   padding: 20px;
+  /* Добавляем черный фон на всякий случай, если картинка не загрузится */
+  background-color: #1a1a1a; 
+  overflow: hidden; /* Чтобы картинка не вылезала */
+}
+
+/* Обертка для картинки, чтобы затемнить её */
+.hero-bg-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0; /* Самый нижний слой */
+}
+
+/* Затемнение поверх картинки */
+.hero-bg-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--bg-overlay); /* Используем ваше затемнение */
+  z-index: 1;
 }
 
 .hero::before {
@@ -323,15 +345,15 @@ body {
     font-size: 2.5rem;
   }
   /* 1. Убираем фон-картинку, оставляем черный */
-  .hero {
-    background-image: none !important; /* Убираем дракона */
-    background-color: #000;            /* Чисто черный фон */
-    min-height: 100vh;                 /* На весь экран */
-    /* Сильно уменьшаем внутренние отступы секции */
-    padding-top: 40px; 
-    padding-bottom: 40px;
-    justify-content: center;           /* Центрируем контент */
+  .hero-bg-wrapper {
+    display: none; 
   }
+  
+  .hero {
+    background-color: #000; /* Чистый черный фон на мобиле */
+    /* Остальные ваши стили для мобилки */
+  }
+
 
   /* 2. Адаптация логотипа и уменьшение отступов */
   .hero-logo {
