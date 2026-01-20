@@ -49,13 +49,14 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   manifest: '/site.webmanifest',
+  // ВОТ ЭТА ЧАСТЬ ОТВЕЧАЕТ ЗА ФАВИКОНКИ ДЛЯ ЯНДЕКСА:
   icons: {
     icon: [
-      { url: '/favicon.ico', sizes: 'any' },
-      { url: '/favicon.svg', type: 'image/svg+xml' },
-      { url: '/favicon-96x96.png', type: 'image/png', sizes: '96x96' },
+      { url: '/favicon.ico', sizes: 'any' }, // Для старых браузеров
+      { url: '/favicon.svg', type: 'image/svg+xml' }, // РЕКОМЕНДУЕТСЯ ЯНДЕКСОМ
+      { url: '/favicon-96x96.png', type: 'image/png', sizes: '96x96' }, // PNG высокого качества
     ],
-    apple: '/apple-touch-icon.png',
+    apple: '/apple-touch-icon.png', // Для iPhone/iPad
   },
   openGraph: {
     title: 'Black Dragon Barber - Барбершоп в Одинцово',
@@ -85,7 +86,8 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    // yandex: 'ваш_код_верификации_яндекс', 
+    // Сюда вставьте код из Яндекс.Вебмастера, когда он у вас будет
+    // yandex: 'код_верификации',
   },
 }
 

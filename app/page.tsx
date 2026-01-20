@@ -77,7 +77,6 @@ export default function Home() {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-logo">
-          {/* Проверьте, что хотите использовать именно favicon.svg, а не logo.png */}
           <Image
             src="/lo.png" 
             width={170}
