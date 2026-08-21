@@ -1,26 +1,11 @@
 import Image from 'next/image'
-import type { Metadata } from 'next'
 
-export const metadata: Metadata = {
-  title: 'Барбершоп Black Dragon — Мужские стрижки в Одинцово',
-  description:
-    'Барбершоп Black Dragon в Трехгорке (Одинцово). Мужские стрижки, моделирование бороды, комплексы. Онлайн запись.',
-  alternates: {
-    canonical: 'https://dragonbarber.ru',
-  },
-  openGraph: {
-    title: 'Black Dragon Barber',
-    description: 'Барбершоп в Одинцово — мужские стрижки и борода',
-    url: 'https://dragonbarber.ru',
-    images: [
-      {
-        url: 'https://dragonbarber.ru/rov.jpg',
-        width: 1200,
-        height: 630,
-      },
-    ],
-  },
-}
+// Метаданные для главной страницы уже заданы в app/layout.tsx (title.default,
+// description, openGraph, twitter, canonical: '/'). Отдельный export metadata
+// здесь раньше ПОЛНОСТЬЮ перезаписывал объект openGraph из layout (Next.js не
+// делает глубокий мёрдж вложенных полей metadata), из-за чего терялись
+// siteName, locale и type в og-тегах, а title/description дублировались с
+// разным текстом в двух файлах. Убрано намеренно — см. layout.tsx.
 
 const pricingData = {
   categories: [
@@ -81,20 +66,22 @@ export default function Home() {
 
     priceRange: '500-1800 RUB',
 
-    openingHoursSpecification: {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: [
-        'Monday',
-        'Tuesday',
-        'Wednesday',
-        'Thursday',
-        'Friday',
-        'Saturday',
-        'Sunday',
-      ],
-      opens: '10:00',
-      closes: '20:00',
-    },
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: [
+          'Monday',
+          'Tuesday',
+          'Wednesday',
+          'Thursday',
+          'Friday',
+          'Saturday',
+          'Sunday',
+        ],
+        opens: '10:00',
+        closes: '20:00',
+      },
+    ],
 
     hasOfferCatalog: {
       '@type': 'OfferCatalog',

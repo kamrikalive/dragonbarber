@@ -9,19 +9,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
 
-    {
-      url: 'https://dragonbarber.ru/#price',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-
-    {
-      url: 'https://dragonbarber.ru/#contacts',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
+    // Якоря вида /#price и /#contacts убраны: это не отдельные страницы,
+    // поисковики не индексируют фрагменты URL как самостоятельные адреса,
+    // и такие записи в sitemap.xml не несут пользы, а иногда трактуются
+    // как некачественные/дублирующие записи.
 
     {
       url: 'https://dragonbarber.ru/privacy',

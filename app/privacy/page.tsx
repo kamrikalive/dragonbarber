@@ -1,8 +1,11 @@
 import React from 'react';
 
 export const metadata = {
-  title: 'Политика конфиденциальности | Black Dragon Barber',
+  title: 'Политика конфиденциальности',
   description: 'Политика обработки персональных данных барбершопа Black Dragon.',
+  alternates: {
+    canonical: '/privacy',
+  },
 }
 
 const PrivacyPolicyPage = () => {

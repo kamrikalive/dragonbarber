@@ -7,11 +7,13 @@ export const viewport: Viewport = {
   themeColor: '#1a1a1a',
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
 }
 
 export const metadata: Metadata = {
-  title: 'Black Dragon Barber | Мужские стрижки и оформление бороды в Одинцово (Трехгорка)',
+  title: {
+    default: 'Black Dragon Barber | Мужские стрижки и оформление бороды в Одинцово (Трехгорка)',
+    template: '%s | Black Dragon Barber',
+  },
   description: 'Профессиональный барбершоп Black Dragon в Одинцово (Трехгорка). Мужские и детские стрижки, моделирование бороды, опасное бритье, камуфляж седины. Онлайн-запись. Ул. Чистяковой, 84.',
   metadataBase: new URL('https://dragonbarber.ru/'),
   alternates: {
@@ -34,7 +36,7 @@ export const metadata: Metadata = {
     siteName: 'Black Dragon Barber',
     images: [
       {
-        url: 'https://storage.yandexcloud.net/relaxdev/dragonbarber/rov.jpg',
+        url: '/rov.jpg',
         width: 1200,
         height: 630,
         alt: 'Интерьер и атмосфера барбершопа Black Dragon Barber',
@@ -42,6 +44,12 @@ export const metadata: Metadata = {
     ],
     locale: 'ru_RU',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Black Dragon Barber - Барбершоп в Одинцово',
+    description: 'Стильные мужские стрижки и оформление бороды. Ждем вас на ул. Чистяковой, 84.',
+    images: ['/rov.jpg'],
   },
   robots: {
     index: true,
@@ -114,6 +122,9 @@ export default function RootLayout({
             <div className="footer-links">
                <Link href="/privacy" className="privacy-link">
                  Политика конфиденциальности
+               </Link>
+               <Link href="https://relaxdev.ru" className="RelaxDev">
+                 размещен на relaxdev.ru
                </Link>
             </div>
             
